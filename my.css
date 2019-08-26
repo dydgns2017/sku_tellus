@@ -1,26 +1,5 @@
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 400;
-  src: local('NanumGothic'), url(http://fonts.gstatic.com/s/nanumgothic/v17/PN_3Rfi-oW3hYwmKDpxS7F_D-djb.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 700;
-  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(http://fonts.gstatic.com/s/nanumgothic/v17/PN_oRfi-oW3hYwmKDpxS7F_LQv3LyVsj.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 800;
-  src: local('NanumGothic ExtraBold'), local('NanumGothic-ExtraBold'), url(http://fonts.gstatic.com/s/nanumgothic/v17/PN_oRfi-oW3hYwmKDpxS7F_LXv7LyVsj.ttf) format('truetype');
-}
-
 body { 
   margin: 0;
-  /*font-family: Arial, Helvetica, sans-serif;*/
-  font-family: 'Nanum Gothic', serif;
 }
 
 header {
@@ -226,4 +205,88 @@ footer img {
   background: white;
   padding: 10px;
   text-align:center;
+}
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+
+.accordion a::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1.1rem;
+  color: #7288a2;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  font-weight: 1000;
+}
+
+.accordion a.active::after {
+  content: '-';
+  color: #03b5d2;
+}
+
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
 }
