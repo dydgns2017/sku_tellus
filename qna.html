@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="my.css">
+		<link rel="shortcut icon" href="images/favicon.png"/>
+		<title>Tellus - Software Edu</title>
+	</head>
+<style>
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #373d51;
+  padding: 1.3rem;
+  margin: 0;
+}
+
+.accordion a {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem 3rem 1rem 1rem;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion a:hover::after {
+  border: 1px solid #03b5d2;
+}
+
+.accordion a.active {
+  color: #03b5d2;
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion a::after {
+  content: '+';
+  position: absolute;
+  float: right;
+  right: 1rem;
+  font-size: 1.1rem;
+  color: #7288a2;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid #7288a2;
+  text-align: center;
+  font-weight: 1000;
+}
+
+.accordion a.active::after {
+  content: '-';
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion .content {
+  opacity: 0;
+  padding: 0 1rem;
+  max-height: 0;
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+  clear: both;
+  -webkit-transition: all 0.2s ease 0.15s;
+  -o-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.accordion .content.active {
+  opacity: 1;
+  padding: 1rem;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  -o-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+}
+</style>
+<body>
+	<header>
+		<img src="images/logo.png" onclick="javascript:window.open('./index.html', '_self');">
+	<div class="header-right">
+		<a href="./curl.html">교육과정</a>
+		<a href="./qna.html">자주묻는 질문</a>
+		<a href="./mail.html">문의하기</a>
+	</div> 
+	</header>
+
+<div class="blue" style="height:10px;"></div>
+<div class="curl" style="background-color : 	#F0E68C; height: 150px;">
+	<br/><br/>
+	<h1 class="title-banner-h1" style="font-size: 45px;color:black;">자주묻는 질문</h1>
+	<h1 class="title-banner-h1" style="font-size: 60px;">🔔</h1>
+</div>
+
+<!-- https://codepen.io/dar-o-t-villena/pen/vbMQLR?&page=1 -->
+<div class="container">
+
+  <h2>교육 문의</h2>
+<div class="blue" style="height:5px;"></div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+		<a>Tellus는 어떠한 활동인가요?</a>
+      <div class="content">
+		  <p>Tellus는 성결대학교 내에서 활동중인 소프트웨어 교육봉사 활동입니다. 2018년부터 평촌초등학교에서 교육을 진행했으며, 2019년 1학기에는 금정초등학교 및 군포초등학교에서 소프트웨어 교육을 진행중입니다.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+		<a>무료로 소프트웨어를 가르쳐주는건가요?</a>
+      <div class="content">
+		  <p>무료로 소프트웨어 교육을 진행하고 있습니다. 성결대학교 대학생들 및 교수님과 같이 스크래치로 제작한 교육과정으로 아이들이 소프트웨어에 대한 흥미와 재미를 심어주고 기본적으로 소프트웨어가 무엇인지 알려주고 있습니다.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+		<a>어떻게하면 소프트웨어 교육을 우리 학교에서 받을 수 있나요?</a>
+      <div class="content">
+		  <p> 대학교 1학기 시작하기 한달전 그리고 2학기 시작하기 1달전부터 먼저 신청이 오는 학교에 봉사활동을 진행하고 있습니다. 대학생들이 많이 참여할 수록 많은 초등학교로 배정이 되어 소프트웨어 교육을 진행합니다. 신청방법은 홈페이지 상단에 문의하기를 눌러서 신청해주시길 바랍니다.</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="container" >
+
+  <h2>대학생 봉사활동 문의</h2>
+<div class="blue" style="height:5px;"></div>
+
+  <div class="accordion">
+    <div class="accordion-item">
+		<a>소프트웨어에 대해서 아무것도 모르는데 봉사활동이 가능한가요?</a>
+      <div class="content">
+		  <p>대답은 바로 Yes입니다. 스크래치라는 프로그램을 이용하여 아이들을 알려주는데 스크래치를 배우는데 많은 시간이 필요하지 않습니다. 저희 Tellus 봉사 동아리는 사전교육을 실시하여 봉사자들에게 기본적으로 필요한 지식을 충당해주고 있습니다.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+		<a>봉사시간을 주나요?</a>
+      <div class="content">
+	      <p>네, 1365를 통하여 교육 봉사시간을 할당해주고 있습니다.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+	    <a>언제하나요?</a>
+      <div class="content">
+	      <p>학기 시작하기전에 초등학교와 같이 이야기하여 사전 협의를 한 후, 대학생 학우분들이 시간표가 정해지면 그 이후에 공강날짜에 맞추어 날짜를 정합니다. 공강이 아니더라도 아침에 수업이 없는 학우분들도 소프트웨어 교육봉사를 진행하실 수 있습니다. 단, 12시 20분에 봉사활동이 끝납니다. <br/><br/>봉사시간 : 9:00~12:30(총 3시간 ~ 4시간)</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+	    <a>봉사 신청방법</a>
+      <div class="content">
+	      <p>상단에 문의하기에서 모집기간 때 신청하시면 됩니다. <br/>모집 기간은 학기가 시작하기전 및 학기 초에 모집하고 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" style="margin-top:20px">
+<div class="column" style="background-color: 	gold; width:20%;"><br/></div>
+<div class="column" style="background-color: 	#1E90FF; width:20%;"><br/></div>
+<div class="column" style="background-color: 	#FFB6C9; width:60%;"><br/></div>
+</div>
+	<footer>
+	<br/><br/>
+	<img src="images/footer.png" alt="footer images">
+	<br/><br/>
+	</footer>
+</body>
+<script>
+/* QnA script */
+const items = document.querySelectorAll(".accordion a");
+
+function toggleAccordion(){
+  this.classList.toggle('active');
+  this.nextElementSibling.classList.toggle('active');
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+//
+//
+</script>
+</html>
